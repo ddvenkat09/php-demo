@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web App1</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        #output {
-            font-size: 24px;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Doctor's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Rabiyas Thattu kada</h1>
-    <p>Enter your favarite food:</p>
-    <input type="text" id="nameInput">
-    <button onclick="displayMessage()">Submit</button>
-    <p id="output"></p>
+    <header>
+        <h1>Dr. Rabiya Rasheed A</h1>
+        <p>Homeoepathic Killadi</p>
+    </header>
 
-    <script>
-        function displayMessage() {
-            // Get the user's input
-            var name = document.getElementById("nameInput").value;
-            
-            // Check if the input is empty
-            if (name === "") {
-                alert("Please enter your name.");
-                return;
-            }
-            
-            // Display a greeting message
-            var greeting = "kollila athu, " + name + "!";
-            document.getElementById("output").textContent = greeting;
-        }
-    </script>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tortor nec purus mattis volutpat vel vitae nulla.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>General Health Checkups</li>
+            <li>Cardiology Consultation</li>
+            <li>Internal Medicine</li>
+            <li>Pediatric Care</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:dr.johndoe@example.com">dr.johndoe@example.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">123-456-7890</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Dr. John Doe</p>
+    </footer>
 </body>
 </html>
