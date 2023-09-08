@@ -3,58 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Rabiya Rasheed A - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Simple Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #output {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="header-title">Dr. Rabiya Rasheed A</h1>
-            <p class="header-subtitle">Board-Certified Physician</p>
-        </div>
-    </header>
+    <h1>Simple Web App</h1>
+    <p>Enter your name:</p>
+    <input type="text" id="nameInput">
+    <button onclick="displayMessage()">Submit</button>
+    <p id="output"></p>
 
-    <nav class="navigation">
-        <div class="container">
-            <ul class="navigation-list">
-                <li class="navigation-item"><a href="#about">About</a></li>
-                <li class="navigation-item"><a href="#services">Services</a></li>
-                <li class="navigation-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget tortor nec purus mattis volutpat vel vitae nulla.</p>
-        </div>
-    </section>
-
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <ul class="section-list">
-                <li class="section-item">General Health Checkups</li>
-                <li class="section-item">Cardiology Consultation</li>
-                <li class="section-item">Internal Medicine</li>
-                <li class="section-item">Pediatric Care</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="section-text">Email: <a href="mailto:dr.rabiya@example.com">dr.rabiya@example.com</a></p>
-            <p class="section-text">Phone: <a href="tel:+1234567890">123-456-7890</a></p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">&copy; 2023 Dr. Rabiya Rasheed A</p>
-        </div>
-    </footer>
+    <script>
+        function displayMessage() {
+            // Get the user's input
+            var name = document.getElementById("nameInput").value;
+            
+            // Check if the input is empty
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            
+            // Display a greeting message
+            var greeting = "Hello, " + name + "!";
+            document.getElementById("output").textContent = greeting;
+        }
+    </script>
 </body>
 </html>
